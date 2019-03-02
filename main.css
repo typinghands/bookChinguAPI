@@ -33,8 +33,9 @@ body {
 }
 
 hr {
-  margin: 2rem;
-  border: 0.3rem rgba(0, 0, 0, 0.3) solid;
+  margin: 1rem;
+  width: 5rem;
+  border: 0.2rem rgba(0, 0, 0, 0.3) solid;
   box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
@@ -109,8 +110,8 @@ article {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: space-evenly;
-  width: 30rem;
+  justify-content: center;
+  width: 80%;
 
   border: 2px red solid;
 }
@@ -138,4 +139,17 @@ article {
   border: 0.05rem var(--black) solid;
   background-color: var(--light);
   color: var(--black);
+}
+
+.bookContainer {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: auto;
+  margin-bottom: 2rem;
+  padding: 1rem;
+
+  border: 2px red solid;
 }
