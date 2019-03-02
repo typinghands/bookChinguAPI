@@ -67,6 +67,10 @@ h4 {
   font-size: 1.3rem;
 }
 
+p {
+  font-size: 0.8rem;
+}
+
 header {
   background-color: var(--dark);
   height: 3.5;
@@ -91,12 +95,47 @@ header {
 }
 
 article {
-  margin: 1rem 2rem;
-  padding: 1rem 1rem;
+  margin: 0.2rem 2rem;
+  padding: 0.2rem 0.2rem;
   border: 2px black solid;
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
+}
+
+.flexRowSearch {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30rem;
+
+  border: 2px red solid;
+}
+
+.searchBar {
+  width: 15rem;
+  height: 1rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-family: "Raleway", sans-serif;
+  padding: 0.5rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+  border: 0.05rem var(--black) solid;
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.searchButton {
+  width: 5rem;
+  height: 1rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-family: "Raleway", sans-serif;
+  box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.5);
+  border: 0.05rem var(--black) solid;
+  background-color: var(--light);
+  color: var(--black);
 }
