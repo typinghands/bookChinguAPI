@@ -145,11 +145,18 @@ article {
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 80%;
   height: auto;
   margin-bottom: 2rem;
   padding: 1rem;
 
   border: 2px red solid;
+}
+
+.bookElement{
+  width: 3rem;
+  height: 5rem;
+  background-color: blue;
+  margin: 0.7rem 1.5rem;
 }
