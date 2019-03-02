@@ -1,7 +1,7 @@
 :root {
   --black: #1a3263;
-  --dark: #f5564e;
-  --light: #fab95b;
+  --dark: #ff7657;
+  --light: #ffba5a;
   --white: #e8e2db;
 }
 
@@ -11,7 +11,7 @@ html {
   color: var(--white);
   font-weight: bold;
   text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.8);
-  font-size: 20px;
+  font-size: 2vw;
 }
 
 body {
@@ -51,15 +51,15 @@ h5 {
 }
 
 h1 {
-  font-size: 3rem;
-}
-
-h2 {
   font-size: 2rem;
 }
 
-h3 {
+h2 {
   font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 h4 {
@@ -68,7 +68,7 @@ h4 {
 
 header {
   background-color: var(--dark);
-  height: 5rem;
+  height: 3.5;
   margin: 2rem 0px;
   padding: 0px 2rem;
   width: auto;
@@ -78,8 +78,8 @@ header {
 .divShaped {
   margin: 2rem -1px;
   background-color: var(--dark);
-  height: 5rem;
-  width: 5rem;
+  height: 3.5rem;
+  width: 4rem;
   clip-path: polygon(90% 0, 40% 50%, 90% 99%, 0 100%, 0 0);
   float: left;
 }
