@@ -16,19 +16,32 @@ function bookSearch() {
 
       for (let i = 0; i < data.items.length; i++) {
         /* const authors = data.items[i].volumeInfo.authors[0] || "Nothing"; */
+
+        const title =
+          data.items[i].volumeInfo.title !== undefined
+            ? data.items[i].volumeInfo.title
+            : "Title Not Specified";
+
         const authors =
           data.items[i].volumeInfo.authors !== undefined
             ? data.items[i].volumeInfo.authors[0]
-            : "Nothing";
-        
-        
+            : "Not Specified";
+
+        const publisher =
+          data.items[i].volumeInfo.publisher !== undefined
+            ? data.items[i].volumeInfo.publisher
+            : "Not Specified";
+
+        const publishedDate =
+          data.items[i].volumeInfo.publishedDate !== undefined
+            ? data.items[i].volumeInfo.publishedDate
+            : "Not Specified";
 
         document.getElementById(`book${i}`).innerHTML =
-          `<p class='titleClass'>${data.items[i].volumeInfo.title}</p>` +
-          `<p class='authorClass'>${authors}</p>` +
-          `<p class='authorClass'>${
-            data.items[i].volumeInfo.publishedDate
-          }</p>`;
+          `<p class='titleClass'>${title}</p>` +
+          `<p class='authorClass'>Author(s): ${authors}</p>` +
+          `<p class='publisherClass'>Publisher: ${publisher}</p>` +
+          `<p class='publishedDateClass'>Published Date: ${publishedDate}</p>`;
       }
     },
     error() {
