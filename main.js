@@ -15,9 +15,17 @@ function bookSearch() {
       }
 
       for (let i = 0; i < data.items.length; i++) {
+        /* const authors = data.items[i].volumeInfo.authors[0] || "Nothing"; */
+        const authors =
+          data.items[i].volumeInfo.authors !== undefined
+            ? data.items[i].volumeInfo.authors[0]
+            : "Nothing";
+        
+        
+
         document.getElementById(`book${i}`).innerHTML =
           `<p class='titleClass'>${data.items[i].volumeInfo.title}</p>` +
-          `<p class='authorClass'>${data.items[i].volumeInfo.authors[i]}</p>` +
+          `<p class='authorClass'>${authors}</p>` +
           `<p class='authorClass'>${
             data.items[i].volumeInfo.publishedDate
           }</p>`;
