@@ -10,7 +10,7 @@ html {
   font-family: "Raleway", sans-serif;
   color: var(--white);
   font-weight: bold;
-  text-shadow: 0.1rem 0.1rem 0.1rem rgba(0, 0, 0, 0.8);
+  text-shadow: 0.08rem 0.08rem 0.03rem rgba(0, 0, 0, 0.8);
   font-size: 2vw;
 }
 
@@ -69,7 +69,7 @@ h4 {
 }
 
 p {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 
 header {
@@ -154,17 +154,53 @@ article {
   border: 2px red solid;
 }
 
+.bookElement {
+  width: 90%;
+  height: auto;
+  background-color: var(--light);
+  border-radius: 10px;
+  margin: 0.7rem 1.5rem;
+  padding: 0.1rem 0.3rem;
+  box-shadow: 0.08rem 0.08rem 0.03rem rgba(0, 0, 0, 0.8);
+
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
 .hideElement {
   display: none;
 }
 
-.bookElement {
-  width: 3rem;
-  height: 5rem;
-  background-color: yellowgreen;
+.testdiv {
+  width: 90%;
+  height: 10rem;
+  background-color: var(--light);
+  border-radius: 10px;
   margin: 0.7rem 1.5rem;
+  padding: 0.5rem;
 
   display: grid;
-  grid-template-rows: 1fr 3fr;
-  grid-template-columns: 500px 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.titleClass {
+  grid-column: 1 / -1;
+  color: var(--dark);
+  font-family: "Arvo", serif;
+  font-size: 0.7rem;
+  background-color: var(--white);
+  border-radius: 50px;
+  padding: 0.3rem 0.7rem;
+  box-shadow: 0.08rem 0.08rem 0.03rem rgba(0, 0, 0, 0.8);
+}
+
+.imageClass {
+  grid-row: 2 / -1;
+}
+
+.authorClass {
+  background-color: var(--white);
+  border-radius: 50px;
 }

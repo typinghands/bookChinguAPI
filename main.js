@@ -8,11 +8,32 @@ function bookSearch() {
     dataType: "json",
     success: function(data) {
       console.log(data);
+      document.getElementById("bookContainer").innerHTML = "";
+
+      for (let i = 0; i < data.items.length; i++){
+        document.getElementById("bookContainer").innerHTML =+
+          `<div id='book${i}' class='bookElement'>` +
+          "</div>"
+      };
+
+
       for (let i = 0; i < data.items.length; i++) {
-        document.getElementById(`book${i}`).classList.remove("hideElement");
         document.getElementById(`book${i}`).innerHTML =
-          "<h4>" + data.items[i].volumeInfo.title + "</h4>";
-      }
+          "<p class='titleClass'>" +
+          data.items[i].volumeInfo.title +
+          "</p>" +
+          "<p class='authorClass'>" +
+          data.items[i].volumeInfo.authors[0] +
+          "</p>" +
+          "<p class='authorClass'>" +
+          data.items[i].volumeInfo.publishedDate +
+          "</p>";
+      };
+    },
+    error: function() {
+      alert(
+        "There was an error accessing the Google API. Try refreshing the page please."
+      );
     },
     type: "GET"
   });

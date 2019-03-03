@@ -22,7 +22,7 @@
       <div class="floatClearer"></div>
 
       <article>
-        <p>Find your favourite books!</p>
+        <h5>Find your favourite books!</h5>
         <div class="flexRowSearch">
           <form action="" onsubmit="return false">
             <input
@@ -40,8 +40,8 @@
 
         <div class="bookContainer" id="bookContainer">
           <div class=" bookElement" id="book0"></div>
-          <div class=" bookElement" id="book1"></div>
-          <div class=" bookElement" id="book2"></div>
+          <div class="hideElement bookElement" id="book1"></div>
+          <div class="hideElement bookElement" id="book2"></div>
           <div class="hideElement bookElement" id="book3"></div>
           <div class="hideElement bookElement" id="book4"></div>
           <div class="hideElement bookElement" id="book5"></div>
@@ -49,6 +49,17 @@
           <div class="hideElement bookElement" id="book7"></div>
           <div class="hideElement bookElement" id="book8"></div>
           <div class="hideElement bookElement" id="book9"></div>
+          <div class="testdiv">
+            <p style="grid-column: 1 / -1;">title</p>
+            <p
+              style="grid-row: 2 / -1; width: 200px; height:200px; background-color: blue;"
+            >
+              image
+            </p>
+            <p>text</p>
+            <p>text</p>
+            <p>text</p>
+          </div>
         </div>
       </article>
     </main>
