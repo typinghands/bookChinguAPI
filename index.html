@@ -24,14 +24,22 @@
       <article>
         <p>Find your favourite books!</p>
         <div class="flexRowSearch">
-          <form action="">
-            <input type="text" class="searchBar" />
-            <button type="submit" class="searchButton">Search</button>
+          <form action="" onsubmit="return false">
+            <input
+              type="text"
+              class="searchBar"
+              id="searchBar"
+              placeholder="Try Harry Potter or Shakespear"
+            />
+            <button type="submit" class="searchButton" id="searchButton">
+              Search
+            </button>
           </form>
         </div>
         <hr />
 
-        <div class="bookContainer">
+        <div class="bookContainer" id="bookContainer">
+          <div class="bookElement" id="book1"></div>
           <div class="bookElement"></div>
           <div class="bookElement"></div>
           <div class="bookElement"></div>
@@ -47,13 +55,11 @@
           <div class="bookElement"></div>
           <div class="bookElement"></div>
           <div class="bookElement"></div>
-          <div class="bookElement"></div>
-          
-
         </div>
       </article>
     </main>
 
     <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </body>
 </html>
