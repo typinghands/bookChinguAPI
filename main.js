@@ -1,6 +1,5 @@
 function bookSearch() {
   let searchResult = document.getElementById("searchBar").value;
-  document.getElementById("book1").innerHTML = "";
   console.log(searchResult);
 
   $.ajax({
