@@ -1,14 +1,13 @@
 function bookSearch() {
-  let searchResult = document.getElementById("searchBar").value;
+  const searchResult = document.getElementById("searchBar").value;
   console.log(searchResult);
 
   $.ajax({
-    url: "https://www.googleapis.com/books/v1/volumes?q=" + searchResult,
+    url: `https://www.googleapis.com/books/v1/volumes?q=${searchResult}`,
     dataType: "json",
-    success: function(data) {
+    success(data) {
       console.log(data);
       document.getElementById("bookContainer").innerHTML = "";
-      console.log(document.getElementById("bookContainer"));
 
       for (let i = 0; i < data.items.length; i++) {
         document.getElementById("bookContainer").innerHTML +=
@@ -17,18 +16,14 @@ function bookSearch() {
 
       for (let i = 0; i < data.items.length; i++) {
         document.getElementById(`book${i}`).innerHTML =
-          "<p class='titleClass'>" +
-          data.items[i].volumeInfo.title +
-          "</p>" +
-          "<p class='authorClass'>" +
-          data.items[i].volumeInfo.authors[0] +
-          "</p>" +
-          "<p class='authorClass'>" +
-          data.items[i].volumeInfo.publishedDate +
-          "</p>";
+          `<p class='titleClass'>${data.items[i].volumeInfo.title}</p>` +
+          `<p class='authorClass'>${data.items[i].volumeInfo.authors[i]}</p>` +
+          `<p class='authorClass'>${
+            data.items[i].volumeInfo.publishedDate
+          }</p>`;
       }
     },
-    error: function() {
+    error() {
       alert(
         "There was an error accessing the Google API. Try refreshing the page please."
       );
