@@ -9,7 +9,8 @@ function bookSearch() {
     success: function(data) {
       console.log(data);
       for (let i = 0; i < data.items.length; i++) {
-        bookContainer.innerHTML +=
+        document.getElementById(`book${i}`).classList.remove("hideElement");
+        document.getElementById(`book${i}`).innerHTML =
           "<h4>" + data.items[i].volumeInfo.title + "</h4>";
       }
     },

@@ -154,9 +154,17 @@ article {
   border: 2px red solid;
 }
 
-.bookElement{
+.hideElement {
+  display: none;
+}
+
+.bookElement {
   width: 3rem;
   height: 5rem;
   background-color: yellowgreen;
   margin: 0.7rem 1.5rem;
+
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  grid-template-columns: 500px 1fr;
 }
