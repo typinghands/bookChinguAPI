@@ -204,3 +204,18 @@ article {
   background-color: var(--white);
   border-radius: 50px;
 }
+
+.publisherClass {
+  background-color: var(--white);
+  border-radius: 50px;
+}
+
+.publishedDateClass {
+  background-color: var(--white);
+  border-radius: 50px;
+}
+
+.readMoreClass {
+  background-color: var(--dark);
+  border-radius: 50px;
+}

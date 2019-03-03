@@ -22,7 +22,7 @@ function bookSearch() {
             ? data.items[i].volumeInfo.title
             : "Title Not Specified";
 
-        const authors =
+        const author =
           data.items[i].volumeInfo.authors !== undefined
             ? data.items[i].volumeInfo.authors[0]
             : "Not Specified";
@@ -39,14 +39,14 @@ function bookSearch() {
 
         document.getElementById(`book${i}`).innerHTML =
           `<p class='titleClass'>${title}</p>` +
-          `<p class='authorClass'>Author(s): ${authors}</p>` +
+          `<p class='authorClass'>Author: ${author}</p>` +
           `<p class='publisherClass'>Publisher: ${publisher}</p>` +
           `<p class='publishedDateClass'>Published Date: ${publishedDate}</p>`;
       }
     },
     error() {
       alert(
-        "There was an error accessing the Google API. Try refreshing the page please."
+        "There was an error accessing the Google API. Please try refreshing the page."
       );
     },
     type: "GET"
