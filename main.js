@@ -42,12 +42,18 @@ function bookSearch() {
             ? data.items[i].volumeInfo.publishedDate
             : "Not Specified";
 
+        const infoLink =
+          data.items[i].volumeInfo.infoLink !== undefined
+            ? data.items[i].volumeInfo.infoLink
+            : "Link Unavailable";
+
         document.getElementById(`book${i}`).innerHTML =
           `<p class='titleClass'>${title}</p>` +
           `<p class='imageClass'><img src="${image}" alt="${title}"></p>` +
           `<p class='authorClass'>Author: ${author}</p>` +
           `<p class='publisherClass'>Publisher: ${publisher}</p>` +
-          `<p class='publishedDateClass'>Published Date: ${publishedDate}</p>`;
+          `<p class='publishedDateClass'>Published Date: ${publishedDate}</p>` +
+          `<p class='infoClass'><a href="${infoLink}" target="_blank">Read More Here</a></p>`;
       }
     },
     error() {
