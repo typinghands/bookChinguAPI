@@ -22,6 +22,11 @@ function bookSearch() {
             ? data.items[i].volumeInfo.title
             : "Title Not Specified";
 
+        const image =
+          data.items[i].volumeInfo.imageLinks !== undefined
+            ? data.items[i].volumeInfo.imageLinks.thumbnail
+            : "No Image Available";
+
         const author =
           data.items[i].volumeInfo.authors !== undefined
             ? data.items[i].volumeInfo.authors[0]
@@ -39,6 +44,7 @@ function bookSearch() {
 
         document.getElementById(`book${i}`).innerHTML =
           `<p class='titleClass'>${title}</p>` +
+          `<p class='imageClass'><img src="${image}" alt="${title}"></p>` +
           `<p class='authorClass'>Author: ${author}</p>` +
           `<p class='publisherClass'>Publisher: ${publisher}</p>` +
           `<p class='publishedDateClass'>Published Date: ${publishedDate}</p>`;
