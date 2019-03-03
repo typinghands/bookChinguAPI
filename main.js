@@ -8,13 +8,12 @@ function bookSearch() {
     success: function(data) {
       console.log(data);
       document.getElementById("bookContainer").innerHTML = "";
+      console.log(document.getElementById("bookContainer"));
 
-      for (let i = 0; i < data.items.length; i++){
-        document.getElementById("bookContainer").innerHTML =+
-          `<div id='book${i}' class='bookElement'>` +
-          "</div>"
-      };
-
+      for (let i = 0; i < data.items.length; i++) {
+        document.getElementById("bookContainer").innerHTML +=
+          `<div id='book${i}' class='bookElement'>` + "</div>";
+      }
 
       for (let i = 0; i < data.items.length; i++) {
         document.getElementById(`book${i}`).innerHTML =
@@ -27,7 +26,7 @@ function bookSearch() {
           "<p class='authorClass'>" +
           data.items[i].volumeInfo.publishedDate +
           "</p>";
-      };
+      }
     },
     error: function() {
       alert(
