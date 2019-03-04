@@ -49,7 +49,7 @@ function bookSearch() {
 
         document.getElementById(`book${i}`).innerHTML =
           `<p class='titleClass'>${title}</p>` +
-          `<p class='imageClass'><img src="${image}" alt="${title}"></p>` +
+          `<p class='imageClass'><img src="${image}" alt="${title}" class='imageLook'></p>` +
           `<p class='authorClass'>Author: ${author}</p>` +
           `<p class='publisherClass'>Publisher: ${publisher}</p>` +
           `<p class='publishedDateClass'>Published Date: ${publishedDate}</p>` +
